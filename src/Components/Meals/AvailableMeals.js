@@ -1,7 +1,7 @@
 import styles from "./AvailableMeals.module.css";
 
 import Card from "../UI/Card";
-import MealsItem from "./MealsItem/MealsIttem";
+import MealsItem from "./MealsItem/MealsItem";
 
 const DUMMY_MEALS = [
   {
@@ -33,6 +33,7 @@ const DUMMY_MEALS = [
 const AvailableMeals = (props) => {
   const mealItem = DUMMY_MEALS.map((item) => (
     <MealsItem
+      id={item.id}
       key={item.id}
       name={item.name}
       description={item.description}
