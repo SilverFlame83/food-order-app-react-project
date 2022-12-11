@@ -3,7 +3,7 @@ import { useState } from "react";
 import Cart from "./Components/Cart/Cart";
 import Header from "./Components/Layouts/Header";
 import Meals from "./Components/Meals/Meals";
-import CartContext from "./store/cart-context";
+import CartProvider from "./store/CartProvider";
 
 function App() {
   const [showCartModal, setCartModal] = useState(false);
@@ -16,11 +16,11 @@ function App() {
     return setCartModal(false);
   };
   return (
-    <CartContext>
+    <CartProvider>
       {showCartModal && <Cart onCancel={hideModal}/>}
       <Header onCartShowed={showCart} />
       <Meals />
-    </CartContext>
+    </CartProvider>
   );
 }
 
