@@ -16,7 +16,7 @@ function App() {
   };
   return (
     <Fragment>
-      {showCartModal && <Cart />}
+      {showCartModal && <Cart onCancel={hideModal}/>}
       <Header onCartShowed={showCart} />
       <Meals />
     </Fragment>
