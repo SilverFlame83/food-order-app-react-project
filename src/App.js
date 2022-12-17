@@ -17,7 +17,7 @@ function App() {
   };
   return (
     <CartProvider>
-      {showCartModal && <Cart onCancel={hideModal}/>}
+      {showCartModal && <Cart onCancel={hideModal} />}
       <Header onCartShowed={showCart} />
       <Meals />
     </CartProvider>
